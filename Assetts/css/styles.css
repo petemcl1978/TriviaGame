@@ -1,10 +1,58 @@
 body{
    background-position: center;
 background-repeat: no-repeat;
+padding:0;
+margin: 0;
+width: 100%;
+height: 100%;
+font-family: "Roboto Mono",Roboto, san-serif;
+font-weight: 400;
 }
-h1 {
-    color: rgb(62, 255, 37);
-    font-weight: blod;
-    font-size: 65px;
-    text
+
+#stage {
+    width: 50%;
+    height: 60%;
+    border: 10px solid #0f0f7e;
+    background-color:#0e1fdc;
+    position: fixed;
+    top;0;
+}
+
+#gameContainer h1{
+    text-align: center;
+    font-size: 54;
+    padding: 0;
+    color: #fff;
+}
+
+#gameHeader {
+    display: none;
+    padding: 0 20px;
+}
+
+#gameChoices {
+    display; none;
+}
+
+.container {
+    padding: 20px;
+    
+}
+#gameChoices button {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0,26);
+    line-height: 32px;
+    border-radius: 2px;
+    font-size: 26px;
+    width: 100%;
+    outline:none;
+    boadrder: none;
+    background-color: hsl(147, 100%, 57%);
+    height: 100%;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    padding: 12px;
+    font-family: "roboto Mono", Roboto, sans-serif;
+    font-weight: 400;
 }
