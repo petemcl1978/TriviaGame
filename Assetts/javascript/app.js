@@ -40,5 +40,16 @@ function animationPipeline() {
         'A Boston stand up who played a gang member with a very distinct voice turned Police officer in the Police Acadamy movies?',
         "Former Newton resident turned stand up comic wrote and directed 'Pootie Tang' and had his own show on FX.",
         "Which Late Night host and Boston Comic legend are cousins?",
+    ],
+
+    answers = [
+        ['Kevin Meany','Louis CK','Paula Poundstone','Bill Burr'],
+        ['Bill Murray','Gilda Radner','John Belushi','Phil Hartmann'],
+        ['Jay Leno','Dave Letterman','Conan Obrien','Jimmy Kimmel'],
+        ['John Candy','Lenny Clark','Tony V','Stephen Wright'],
+        ['Burns and Allen','Ace and Gary','Lenny Clark and Steve Sweeney','Jimmy Tingle and Lamont Price'],
+        ['Steve Guttenburg','Bobcat Goldwaith','Dennis Leary','Thomas Wilson'],
+        ['Steve Carrell','John Cena','Dane Cook','Louis C.K.'],
+        ['Jay Leno and Joan Rivers','Conan OBrien and Dennis Leary','Lenny Clark and Jimmy Kimmel','John Stewart and Steve Sweeney'],
     ]
 }
