@@ -51,5 +51,119 @@ function animationPipeline() {
         ['Steve Guttenburg','Bobcat Goldwaith','Dennis Leary','Thomas Wilson'],
         ['Steve Carrell','John Cena','Dane Cook','Louis C.K.'],
         ['Jay Leno and Joan Rivers','Conan OBrien and Dennis Leary','Lenny Clark and Jimmy Kimmel','John Stewart and Steve Sweeney'],
-    ]
+    ],
+    correctAnswers = [3,2,2,3,2,1,3,1],
+    gameAnswers = [];
+    /** 
+     * setup styles and events
+     **/
+    self._initialize = function (){
+
+        self.windowWasResized();
+        //Add click listener to start buttton
+        startButton.addEventListener('click',self.anwerClicked,false);
+
+    }
+};
+
+/**
+ * called everytime the window resizes to calculate new dimensions
+ **/
+self.windowWasResized = function(){
+    stage.style.height = (h - 20) +'px';
+    stage.style.width = (w - 20) ='px';
+};
+/**
+ * setup the stage and fire of the stage animations
+ **/
+self.startGamePlay = function(){
+    //get the game indexes
+    self.generateGameIndexes();
+
+    // add data to the interface
+    self.setupUserInterfaceWithData();
+    //set the score to zero
+    scoreSpan[0].textContent = actualScore;
+    timerSpan[0]. textContent = timerIndex;
+
+    startAnimation.to([startButton, title], 1, {alpha:0});
+    startAnimation.to([startButton, title]), 0.1, {css:{display:'none'}});
+};
+
+/** 
+ * Callback function from the startAnimation timeline above
+ * this function starts the timer
+ **/
+self.fireOffGameLogic = function() {
+    self.runTimer();
+}
+
+/**
+ * this function rebuilds the UI with a new question and answer
+ **/
+self.stepupUserInterfaceWithData = function() {
+//add questions to buttons
+var ques = questions[gameQuestions[gameIndex]];
+var t = questionTitle[0].getElementsByTagName('span');
+t[0].innerHTML= ques;
+//add answers to buttons
+var and = answers[gameQuestions[gameIndex]];
+for (var i = 0; i<ans.length; i++){
+    var a =ans[i];
+    buttonArray[i].textContent = a;
+}
+};
+/**
+ * called to start a gameplay timer that runs every second
+ **/
+self.runtTimer = function() {
+    timerObject = window.setInterval(self.updateClock, 1000);
+    };
+    /**
+     * Callback function for the gameplay timer
+     **/
+self.updateClock = function(){
+    timerIndex--;
+    if(timerIndex == -1){
+        timerIndex =8;
+        gameIndex++;
+    }
+
+    if (gameIndex == gameQuestions.length) {
+        clearTimeout(timerObject);
+        //end the game
+        self.runEndOfGame();
+        return;
+    } else if (timerIndex == 8){
+        self.setupUserInterfaceWithData();
+    }
+    //Display updated time
+    timerSpan[0].textContent = timerIndex;
+};
+
+/**
+ * determines if an answer is correct or incorrect
+ * displays a messasge to user 
+ **/
+self.anwerClicked = Function(e) {
+
+    clearTimeout(timerObject);
+    //Get the answer index
+    var answerIndex = Number(e.target.getAttribute('data-index'));
+    //get the actual answer index
+    var actualCorrectAnswerIndex = gameAnswers[gameIndex];
+
+    //correct answer
+    if (actualCorrectAnswerIndex == answerIndex){
+        rightAnswer.play();
+        actualyScore += 10;
+        scoreSpan[0].textContent = actualScore;
+        cancelButtons = true;
+        self.dispatch_modal('Your Answer Is: <span class="correct">CORRECT!</span>',1000);
+        
+
+    }
+}
+    
+
 }
