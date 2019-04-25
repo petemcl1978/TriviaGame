@@ -37,7 +37,7 @@ function animationPipeline() {
         "This Late Night host was a writer on SNL and also won a writing Emmy for The Simpsons episode Marge versus The MomoRail.",
         "Boston comedian known for his roles is Canadian Bacon, Mad About You, and most noteably as 'The Guy on the couch' in Half Baked.",
         "This pair of Boston Comedy legends appear in 'There's Something About Mary' as a Police officer and FireFighter"
-        "What Boston stand up, played a gang member with a very distinct voice turned Police officer in the Police Acadamy movies?",
+        'A Boston stand up who played a gang member with a very distinct voice turned Police officer in the Police Acadamy movies?',
         "Former Newton resident turned stand up comic wrote and directed 'Pootie Tang' and had his own show on FX.",
         "Which Late Night host and Boston Comic legend are cousins?",
     ]
