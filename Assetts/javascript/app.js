@@ -159,11 +159,40 @@ self.anwerClicked = Function(e) {
         actualyScore += 10;
         scoreSpan[0].textContent = actualScore;
         cancelButtons = true;
-        self.dispatch_modal('Your Answer Is: <span class="correct">CORRECT!</span>',1000);
-        
-
-    }
-}
+        self.dispatch_modal('YOUR ANSWER IS: <span class="correct">CORRECT!</span>',1000);
+        // Incorrect Answer
+    }  else [
+        wronganswer.play()
+        cancelButtons = true
+        self.dispatch_modal('YOUR ANSWER IS:<span class="incorrect")>Incorrect!</span>', 1000);
     
+/**
+ * This function generates rando indexes to be used for our game logic
+ * the indexes are used to assign questions and correct answers
+ **/
+self.generateGameIndexs = function() {
+    var breakFlag = false;
+    while (!breakFlag) {
+        var randomNumber = Math.floor(Math.random() * 9);
+        if (gameQuestions.indexOf(randomNumber) == -1) {
+            gaeQuestions.push(randomNumber);
+            gameAnswers.push(correctAnswers[randomNumber]);
+        }
+        if (gameQuestions.length == 5) {
+            breakFlag = true;
+        }
+    }
+};
+/**
+ *  Dispatches a modal winddow with a message to user
+ */
+self.dispatch_modal = function(message, time) {
+    window_width = window.innerWidth|| document.documentElement.clientWidth
+                    || document.body.clientwidth;
 
-}
+modal_window.getElementsByTagName('p')[0].innerHTML = message;
+modal_window.style.left =((window_width / 2) - 150)+ 'px';
+
+self.fade_in(time, modal_window, true);
+};
+
