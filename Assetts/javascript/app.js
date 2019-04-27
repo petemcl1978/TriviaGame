@@ -299,7 +299,7 @@ self.runEndOfGame = Function()
            // self._initilize();
          //end of animationPipeline
 
-        //used to call the anumation pipeline function
+        //used to call the animation pipeline function
         var interval = setInterval(function() {if(document.readyState === 'complete'){
             clearInterval(interval);
             var pipe = animatationPipeline();
