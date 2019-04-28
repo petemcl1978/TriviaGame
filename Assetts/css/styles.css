@@ -1,189 +1,26 @@
-#container{
-padding:0;
-margin: 0;
-width: 100%;
-height: 100%;
-font-family: "Roboto Mono",Roboto, san-serif;
-font-weight: 400;
+body{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
 }
-
-#stage {
-    width: 100%;
-    height: 100%;
-    border: 10px solid #000000;
-    position: fixed;
-    color: #010000;
-    top:0;
+.question{
+    float: right;
+	font-weight: 600;
 }
-
-#container {
-    padding:30px;
+.answers {
+    margin-bottom: 20px;
 }
-
-#gameContainer h1{
-    
-    text-align: center;
-    font-size: 54px;
-    padding: 0;
-    color: #fff;
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #297;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
 }
-
-#gameHeader {
-    display: none;
-    padding: 0 20px;
+#submit:hover{
+	background-color: #3a8;
 }
-
-#gameChoices {
-    display: none;
-}
-
-.container {
-    padding: 20px;
-}
-#gameChoices button {
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
-    line-height: 32px;
-    border-radius: 2px;
-    font-size: 26px;
-    width: 100%;
-    outline:none;
-    border: none;
-    background-color: rgb(255, 255, 255);
-    height: 100%;
-    display: block;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    text-align: center;
-    padding: 12px;
-    font-family: "roboto Mono", Roboto, sans-serif;
-    font-weight: 400;
-}
-#gameChoices button:hover {
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.26), 0 4px 15px 0 rgba(0,0,0,0.26);
-    background-color:#ff6a3c;
-}
-
-.left {
-    float: left;
-    display: block;
-}
-
-.questions {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    float: left;
-    display: block;
-    margin-right: 2%;
-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
-}
-
-.question span {
-    color: #ff5722;
-    font-size: 26px;
-}
-
-.timer {
-    width: 15%;
-    background-color: #f4b400;
-    float:left;
-    display: block;
-    margin-right: 2%;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
-    font-size: 26px;
-    color:#fff;
-
-}
-.score {
-    width: 13%;
-    background-color:#fff;
-    float: left;
-    display: block;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0,26);
-    color: #ff5722;
-    font-size: 26px;
-
-}
-.half {width: 50%;}
-
-#startButton {
-    background-color: #f4b400;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    line-height: 32px;
-    border-radius: 2px;
-    border:none;
-    outline: none;
-    width: 100%;
-    color:#fff;
-    font-size: 48px;
-    padding: 30px 0;
-    cursor: pointer;
-    font-family: "Roboto Mono", Roboto, sans-serif;
-    font-weight: 400;
-  }
-
-  #startButton:hover {
-      box-shadow: 0 5px 11px 0 rgba(0,0,0,0.26), 0 4px 15px 0 rgba(0,0,0,0,26);
-      background-color: #ffc728;
-
-  }
-  
-  #modal_window {
-      position: absolute;
-      top: 90px;
-      border:1px solid #333;
-      background-color: #000;
-      width: 340px;
-      z-index: 2000;
-      height: auto;
-      display: none;
-      box-shadow: 0 5px 11px 0 rgba(0,0,0,0,26);
-  }
-
-  .modal_message {
-      padding:10px 20px;
-  }
-  .modal_message p {
-      color: #fff;
-
-  }
-  .modal_message h2 {
-      color: #fff;
-  }
-
-  .modal_message span {
-      float: right;
-  }
-  .modal_message div button {
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
-      line-height: 16px;
-      border-radius: 2px;
-      font-size: 18px;
-      width:130px;
-      outline: none;
-      border: none;
-      background-color: #ff5722;
-      display: block;
-      color: #fff;
-      cursor:pointer;
-      text-align: center;
-      min-height: 44px;
-      padding: 6px;
-      font-family: "Roboto Mono", Roboto, sans-serif;
-      font-weight:400;
-      
-  }
-  l_message div button:hover {
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.26), 0 4px 15px 0 rgba(0, 0, 0, 0.26);
-    background-color: #ff6a3c;
-  }
-  
-  .modal_message span.correct {
-    color:#4caf50;
-  }
-  
-  .modal_message span.incorrect {
-    color:#f44336;
-  }
-  
