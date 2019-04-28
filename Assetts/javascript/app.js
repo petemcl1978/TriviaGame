@@ -10,25 +10,25 @@ function animationPipeline() {
     stage = document.getElementById('stage'),
     startButton = document.getElementById('startButton'),
     title = document.getElementById('title'),
-    questionTitle = document.getElementByClassName("questions"),
-    score = document.getElementByClassName("score"),
-    scoreSpan = score[0].getElementByTagName('span'),
-    timer= document.getElementsByClassname("timer"),
-    timerSpan =timer[0].getElementsbyTagName('span'),
+    questionTitle = document.getElementsByClassName("questions"),
+    score = document.getElementsByClassName("score"),
+    scoreSpan = score[0].getElementsByTagName('span'),
+    timer = document.getElementsByClassName("timer"),
+    timerSpan = timer[0].getElementsByTagName('span'),
     gameChoices = document.getElementById('gameChoices'),
     gameHeader = document.getElementById('gameHeader'),
     buttonOne = document.getElementById('buttonOne'),
     buttonTwo = document.getElementById("buttonTwo"),
-    buttonThree = document.getElememtById('buttonThree'),
+    buttonThree = document.getElementById('buttonThree'),
     buttonFour = document.getElementById('buttonFour'),
     buttonArray = [buttonOne, buttonTwo, buttonThree, buttonFour],
     modal_window = document.getElementById('modal_window'),
-    startAnimation =new TimelineMax({repeat:0}),
+    startAnimation = new TimelineMax({repeat:0}),
     gameIndex = 0,
     actualScore = 0,
     timerIndex = 8,
     runningGameAgain = false,
-    timerObject = undefinded,
+    timerObject = undefined,
     gameQuestions = [],
 
     questions=[
@@ -302,7 +302,7 @@ self.runEndOfGame = Function()
         //used to call the anumation pipeline function
         var interval = setInterval(function() {if(document.readyState === 'complete'){
             clearInterval(interval);
-            var pipe = animatationPipeline();
+            var pipe = animationPipeline();
             window.onresize = function(event) {
                 var pipe = animationPipeline()
             };
